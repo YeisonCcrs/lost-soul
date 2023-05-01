@@ -25,6 +25,7 @@ class Jugador {
 
     actualizar(){
         this.posicion.y+=this.velocidad.y
+        this.posicion.x+=this.velocidad.x
         this.lados.inferior = this.posicion.y + this.alto
         if(this.lados.inferior + this.velocidad.y < canvas.height){
             this.velocidad.y+=1
