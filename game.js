@@ -5,6 +5,10 @@ const mapa = new Image()
 canvas.width = 586 // 1024
 canvas.height = 384 // 576
 
+
+const colisionesReacomodadas = colisionesNivel1.reacomodar2D()
+const bloquesDeColisiones = colisionesReacomodadas.crearObjetosDesdeMapa()
+
 const fondoNivel1 = new Sprite({
     posicion:{
         x:0,
