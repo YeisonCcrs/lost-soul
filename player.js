@@ -5,8 +5,8 @@ class Jugador {
             y:100
         }
 
-        this.ancho=100
-        this.alto=100
+        this.ancho=32
+        this.alto=32
         this.lados = {
             inferior: this.posicion.y + this.alto, 
         }

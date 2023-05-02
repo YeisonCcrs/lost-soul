@@ -2,9 +2,16 @@
 const canvas = document.querySelector('canvas')
 const c =canvas.getContext('2d')
 const mapa = new Image()
-canvas.width = 64 * 16 // 104
-canvas.height = 64 * 9 // 576
+canvas.width = 586 // 1024
+canvas.height = 384 // 576
 
+const fondoNivel1 = new Sprite({
+    posicion:{
+        x:0,
+        y:0,
+    },
+    fondoSrc: './images/nivel-1-inicio.png',
+})
 const jugador = new Jugador()
 const teclas ={
     w: {
@@ -20,8 +27,7 @@ const teclas ={
 
 function animacion(){
     window.requestAnimationFrame(animacion)
-    c.fillStyle='white'
-    c.fillRect(0,0,canvas.width,canvas.height)
+    fondoNivel1.dibujar()
 
     jugador.velocidad.x=0
     if(teclas.d.presionada){
@@ -33,6 +39,7 @@ function animacion(){
 
     jugador.dibujar()
     jugador.actualizar()
+
 }
 
 animacion()
