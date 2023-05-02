@@ -28,7 +28,9 @@ const teclas ={
 function animacion(){
     window.requestAnimationFrame(animacion)
     fondoNivel1.dibujar()
-
+    bloquesDeColisiones.forEach(BloqueDeColision => {
+        BloqueDeColision.dibujar()
+    })
     jugador.velocidad.x=0
     if(teclas.d.presionada){
         jugador.velocidad.x=3

@@ -19,11 +19,20 @@ const colisionesNivel1 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         return filas
 }
 
+const bloquesDeColisiones = []
 const colisionesReacomodadas = colisionesNivel1.reacomodar2D()
-colisionesReacomodadas.forEach((filas) => {
-    filas.forEach((symbol) => {
-        if(symbol===8459){
+colisionesReacomodadas.forEach((filas, y) => {
+    filas.forEach((valor, x) => {
+        if(valor===8459){
             //crear un nuevo bloque de colision
+            bloquesDeColisiones.push(
+                new BloqueDeColision({
+                    posicion:{
+                        x:x * 32,
+                        y:y * 32,
+                    },
+                })
+            )
         }
     })
 });
