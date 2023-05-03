@@ -2,7 +2,7 @@ class BloqueDeColision{
     constructor({posicion}){
         this.posicion=posicion
         this.ancho=32
-        this.alto=32
+        this.alto=32        
     }
 
     dibujar() {

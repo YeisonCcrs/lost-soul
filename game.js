@@ -16,7 +16,9 @@ const fondoNivel1 = new Sprite({
     },
     fondoSrc: './images/nivel-1-inicio.png',
 })
-const jugador = new Jugador()
+const jugador = new Jugador({
+    bloquesDeColision: bloquesDeColisiones,
+})
 const teclas ={
     w: {
         presionada:false,

@@ -7,7 +7,6 @@ class Sprite{
         }
         this.fondo.src = fondoSrc
         this.imgCargada = false
-        
     }
 
     dibujar(){

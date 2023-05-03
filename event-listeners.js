@@ -1,7 +1,7 @@
 window.addEventListener('keydown', (event) => {
     console.log(event)
     switch(event.key){
-        case 'w':  if(jugador.velocidad.y===0) jugador.velocidad.y=-15
+        case 'w':  if(jugador.velocidad.y===0) jugador.velocidad.y= -15
             break
         case 'a': teclas.a.presionada=true
             break
