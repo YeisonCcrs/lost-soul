@@ -2,8 +2,8 @@
 const canvas = document.querySelector('canvas')
 const c =canvas.getContext('2d')
 const mapa = new Image()
-canvas.width = 586 // 1024
-canvas.height = 384 // 576
+canvas.width = 586 
+canvas.height = 384 
 
 
 const colisionesReacomodadas = colisionesNivel1.reacomodar2D()
@@ -14,7 +14,7 @@ const fondoNivel1 = new Sprite({
         x:0,
         y:0,
     },
-    fondoSrc: './images/nivel-1-inicio.png',
+    fondoSrc: './imagenes/nivel-1-inicio.png',
 })
 const jugador = new Jugador({
     bloquesDeColision: bloquesDeColisiones,

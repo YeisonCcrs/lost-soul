@@ -1,6 +1,6 @@
 class Jugador {
 
-    //Pido como parámetro un array de los bloques de colisió, para poder detectar los bloques
+    //Pide como parámetro un array de los bloques de colisión, para poder hacer el efecto de choque
   constructor({ bloquesDeColision = [] }) {
 
     this.posicion = {
@@ -28,11 +28,13 @@ class Jugador {
     this.bloquesDeColision = bloquesDeColision;
   }
 
+  //Muestra el jugador en pantalla
   dibujar() {
     c.fillStyle = "red";
     c.fillRect(this.posicion.x, this.posicion.y, this.ancho, this.alto);
   }
 
+  //Hace el efecto de movimiento
   actualizar() {
     //A la posición del jugador en pantalla, le sumo la velocidad que lleve en ese momento, para que se mueva esa distancia
     this.posicion.x += this.velocidad.x;
@@ -40,12 +42,13 @@ class Jugador {
     this.aplicarGravedad()
     this.verificarColisionesVerticales()
 
-    //this.lados.inferior = this.posicion.y + this.alto; (laod inferior del jugador, por si lo necesito)
+    //this.lados.inferior = this.posicion.y + this.alto; (lado inferior del jugador, por si lo necesito)
   }
 
   /*Para detectar las colisiones, primero se detectan las horizontales, porque de otro modo en el caso de que nuestro jugador esté, 
     por ejemplo, sobre tres bloques al mismo tiempo, habría conflictos para determinar a cuál de los tres bloques se le aplica el efecto en la 
     horizontal*/
+    
     verificarColisionesHorizontales(){
       //Ciclo pra revisar si hay colisiones en el eje HORIZONTAL
     for (let i = 0; i < this.bloquesDeColision.length; i++) {
